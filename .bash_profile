@@ -31,9 +31,9 @@ then
 fi
 
 # Route local traffic over ethernet when using certain WiFi networks w/o proxy.
-function route_add() {
-  sudo route add -net 10.0.0.0/8 -interface en0
-}
+#function route_add() {
+#  sudo route add -net 10.0.0.0/8 -interface en0
+#}
 
 # Delete the route added above.
 function route_delete() {
@@ -42,9 +42,9 @@ function route_delete() {
 
 # Route IRC traffic through one of my servers.
 # Use SOCKS5 settings 'localhost' and 6667 for server/port.
-function irc_proxy() {
-  ssh -vD 6667 geerlingguy@atl1.servercheck.in
-}
+#function irc_proxy() {
+#  ssh -vD 6667 geerlingguy@atl1.servercheck.in
+#}
 
 # Syntax-highlight code for copying and pasting.
 # Requires highlight (`brew install highlight`).
@@ -68,7 +68,7 @@ if [ -f $brew_prefix/etc/bash_completion ]; then
 fi
 
 # Use brew-installed PHP binaries.
-export PATH="$brew_prefix/opt/php56/bin:$PATH"
+#export PATH="$brew_prefix/opt/php56/bin:$PATH"
 
 # Use nvm.
 export NVM_DIR="$HOME/.nvm"
